@@ -25,7 +25,7 @@ Thiết kế một screen/page (web hoặc mobile) tổng kết số ca mắc Co
 - Trong Git bao gồm: Project + Video record lại màn hình ứng dụng.
 - Giải thưởng công bố dự kiến ngày 22/8
 
-# Video record on Iphone 11
+# Thông tin cá nhân
 - Họ và tên: Nguyễn Mạnh Toàn
 - Email: gs.hbsky@gmail.com
 - SĐT: 0985.942.382
