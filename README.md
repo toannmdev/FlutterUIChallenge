@@ -25,7 +25,10 @@ Thiết kế một screen/page (web hoặc mobile) tổng kết số ca mắc Co
 - Trong Git bao gồm: Project + Video record lại màn hình ứng dụng.
 - Giải thưởng công bố dự kiến ngày 22/8
 
+# Video record on Iphone 11
+- Họ và tên: Nguyễn Mạnh Toàn
+- Email: gs.hbsky@gmail.com
+- SĐT: 0985.942.382
+- Skype: live:gs.hbsky
 
 [![Video record on Iphone 11](./video_record_ios_11.gif)](https://youtu.be/AKJZtOqUDRQ)
-
-[![Video record on Iphone 11](./flutter_ui_challenge_ios.mov)](https://youtu.be/AKJZtOqUDRQ)
