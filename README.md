@@ -27,3 +27,5 @@ Thiết kế một screen/page (web hoặc mobile) tổng kết số ca mắc Co
 
 
 [![Video record on Iphone 11](./video_record_ios_11.gif)](https://youtu.be/AKJZtOqUDRQ)
+
+[![Video record on Iphone 11](./flutter_ui_challenge_ios.mov)](https://youtu.be/AKJZtOqUDRQ)
