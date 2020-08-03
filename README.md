@@ -26,4 +26,4 @@ Thiết kế một screen/page (web hoặc mobile) tổng kết số ca mắc Co
 - Giải thưởng công bố dự kiến ngày 22/8
 
 
-[![Video record on Iphone 11](https://giphy.com/gifs/giVy7pVYPWHqsTRxxw)](https://youtu.be/AKJZtOqUDRQ)
+[![Video record on Iphone 11](./video_record_ios_11.gif)](https://youtu.be/AKJZtOqUDRQ)
