@@ -53,10 +53,23 @@ Widget buildWorldCovidWidget(
           SizedBox(
             height: dDefaultPadding,
           ),
-          Center(
-            child: _buildTextHint(
-              sTotalConfirmed,
-            ),
+          // Center(
+          //   child: _buildTextHint(
+          //     sTotalConfirmed,
+          //   ),
+          // ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _buildTextHint(
+                sTotalConfirmed,
+              ),
+              SizedBox(
+                width: dDefaultPadding / 2,
+              ),
+              _buildTextOption(covidSummary.global.newConfirmed,
+                  textColor: textColorIncreaseNews)
+            ],
           ),
           SizedBox(
             height: dDefaultPadding,
@@ -86,7 +99,8 @@ Widget buildWorldCovidWidget(
                         SizedBox(
                           width: dDefaultPadding / 2,
                         ),
-                        _buildTextOption(219317, textColor: textColorIncrease)
+                        _buildTextOption(covidSummary.global.newRecovered,
+                            textColor: textColorIncrease)
                       ],
                     ),
                     SizedBox(
@@ -115,7 +129,8 @@ Widget buildWorldCovidWidget(
                         SizedBox(
                           width: dDefaultPadding / 2,
                         ),
-                        _buildTextOption(4862, textColor: textColorDecrease)
+                        _buildTextOption(covidSummary.global.newDeaths,
+                            textColor: textColorDecrease)
                       ],
                     ),
                     SizedBox(
@@ -177,7 +192,7 @@ Widget _buildTextOption(num number, {Color textColor}) {
       number != null && number >= 0 ? textColorIncrease : textColorDecrease;
   String strIOD = number != null && number > 0 ? '+' : '';
   return Text(
-    '($strIOD$number)',
+    '($strIOD${getDecimalFormattedString('$number')})',
     style: textHintStyle.copyWith(color: textColor),
     maxLines: 1,
     overflow: TextOverflow.ellipsis,

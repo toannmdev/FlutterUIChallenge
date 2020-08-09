@@ -17,5 +17,6 @@ const Color toastBackgroundColor = Color(0x80000000);
 const Color textColorDefault = Color(0xFFe0e0e0);
 const Color textColorHint = Color(0xFF9d9d9d);
 
+const Color textColorIncreaseNews = Color(0xFF82b1ff);
 const Color textColorIncrease = Color(0xFF06beb6);
 const Color textColorDecrease = Color(0xFFd66d75);

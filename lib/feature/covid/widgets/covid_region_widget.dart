@@ -50,8 +50,8 @@ class CovidRegionWidgetState extends State<CovidRegionWidget> {
           height: 0.05,
           thickness: 0.5,
         ),
-        leftHandSideColBackgroundColor: Color(0x00000000),
-        rightHandSideColBackgroundColor: Color(0x00000000),
+        leftHandSideColBackgroundColor: Colors.transparent,
+        rightHandSideColBackgroundColor: Colors.transparent,
       ),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
@@ -64,7 +64,8 @@ class CovidRegionWidgetState extends State<CovidRegionWidget> {
       InkWell(
         child: _buildText(
             '${sortType == sortName ? (isAscendingName ? '↓' : '↑') : ''} $sRegion',
-            textAlign: TextAlign.left),
+            textAlign: TextAlign.left,
+            bgColor: sortType == sortName ? cardBackgroundColor: Colors.transparent),
         onTap: () {
           sortType = sortName;
           isAscendingName = !isAscendingName;
@@ -79,7 +80,8 @@ class CovidRegionWidgetState extends State<CovidRegionWidget> {
       InkWell(
         child: _buildText(
             '${sortType == sortConfirmed ? (isAscendingConfirmed ? '↓' : '↑') : ''} $sConfirmedNumber',
-            textAlign: TextAlign.right),
+            textAlign: TextAlign.right,
+            bgColor: sortType == sortConfirmed ? cardBackgroundColor: Colors.transparent),
         onTap: () {
           sortType = sortConfirmed;
           isAscendingConfirmed = !isAscendingConfirmed;
@@ -96,7 +98,8 @@ class CovidRegionWidgetState extends State<CovidRegionWidget> {
       InkWell(
         child: _buildText(
             '${sortType == sortRecovered ? (isAscendingRecovered ? '↓' : '↑') : ''} $sTotalRecovered',
-            textAlign: TextAlign.right),
+            textAlign: TextAlign.right,
+            bgColor: sortType == sortRecovered ? cardBackgroundColor: Colors.transparent),
         onTap: () {
           sortType = sortRecovered;
           isAscendingRecovered = !isAscendingRecovered;
@@ -113,7 +116,8 @@ class CovidRegionWidgetState extends State<CovidRegionWidget> {
       InkWell(
         child: _buildText(
             '${sortType == sortDeaths ? (isAscendingDeaths ? '↓' : '↑') : ''} $sTotalDeaths',
-            textAlign: TextAlign.right),
+            textAlign: TextAlign.right,
+            bgColor: sortType == sortDeaths ? cardBackgroundColor: Colors.transparent),
         onTap: () {
           sortType = sortDeaths;
           isAscendingDeaths = !isAscendingDeaths;
@@ -176,8 +180,9 @@ class CovidRegionWidgetState extends State<CovidRegionWidget> {
   }
 
   Widget _buildText(String display,
-      {TextAlign textAlign = TextAlign.right, Color textColor}) {
-    return SizedBox(
+      {TextAlign textAlign = TextAlign.right, Color textColor, Color bgColor}) {
+    return Container(
+      color: bgColor,
         width: _getColumnWidth(),
         child: Padding(
           padding: EdgeInsets.fromLTRB(dDefaultPadding, dDefaultPadding * 2,

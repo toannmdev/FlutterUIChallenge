@@ -31,4 +31,4 @@ Thiết kế một screen/page (web hoặc mobile) tổng kết số ca mắc Co
 - SĐT: 0985.942.382
 - Skype: live:gs.hbsky
 
-[![Video record on Iphone 11](./video_record_ios_11.gif)](https://youtu.be/AKJZtOqUDRQ)
+[![Video record on Iphone 11](./video_record_ios_11.gif)](https://youtu.be/_lsWDPpCINo)
