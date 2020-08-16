@@ -16,6 +16,7 @@ dependencies:
   jiffy_vi: ^3.0.1+1
   fluttertoast: ^7.0.2
   horizontal_data_table: ^1.0.5+5
+  pull_to_refresh: ^1.6.0
 
   base_app: ^1.0.4
 

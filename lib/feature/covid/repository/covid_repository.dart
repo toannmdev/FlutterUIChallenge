@@ -10,6 +10,7 @@ class CovidRepository {
   Future<CovidSummary> getCovidSummary() async {
     var response = await baseRequest.sendRequest(
         '$sBaseUrl$sCovidSummaryUrl', RequestMethod.GET);
-    return CovidSummary.fromJson(response);
+    CovidSummary covidSummary = CovidSummary.fromJson(response);
+    return covidSummary;
   }
 }

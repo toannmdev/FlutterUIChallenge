@@ -7,6 +7,7 @@ import 'package:flutter_ui_challenge/utils/currency_utils.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
 
+// TODO(toannm) need to maintaince later, not good for performance now...
 class CovidRegionWidget extends StatefulWidget {
   final CovidSummary covidSummary;
 
@@ -28,6 +29,14 @@ class CovidRegionWidgetState extends State<CovidRegionWidget> {
   bool isAscendingRecovered = true;
   bool isAscendingDeaths = true;
   int sortType = sortName;
+
+  Country vn;
+
+  @override
+  void initState() {
+    _initVNCountry();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -182,7 +191,7 @@ class CovidRegionWidgetState extends State<CovidRegionWidget> {
   Widget _buildText(String display,
       {TextAlign textAlign = TextAlign.right, Color textColor, Color bgColor}) {
     return Container(
-      color: bgColor,
+        color: bgColor,
         width: _getColumnWidth(),
         child: Padding(
           padding: EdgeInsets.fromLTRB(dDefaultPadding, dDefaultPadding * 2,
@@ -209,5 +218,14 @@ class CovidRegionWidgetState extends State<CovidRegionWidget> {
 
   double _getColumnWidth() {
     return (MediaQuery.of(context).size.width) / _totalRows;
+  }
+
+  /// TODO(toannm) change to current location later
+  void _initVNCountry() {
+    vn = widget.covidSummary.countries
+        .firstWhere((element) => element.countryCode.toLowerCase() == 'vn');
+    widget.covidSummary.countries
+        .removeWhere((element) => element.countryCode.toLowerCase() == 'vn');
+    widget.covidSummary.countries.insert(0, vn);
   }
 }
